@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uganda Career Compass</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#1f2937', // Gray-800
+                            yellow: '#facc15', // Yellow-400
+                            red: '#e11d48', // Rose-600
+                            light: '#f8fafc', // Slate-50
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-brand-black text-white sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="flex items-center gap-2 text-xl font-bold text-brand-yellow tracking-tight">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                        UG Compass
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-300 hover:text-brand-yellow transition-colors duration-200 text-sm font-medium">Home</a>
+                    <a href="#careers" class="text-gray-300 hover:text-brand-yellow transition-colors duration-200 text-sm font-medium">Career Fields</a>
+                    <a href="#resources" class="text-gray-300 hover:text-brand-yellow transition-colors duration-200 text-sm font-medium">Resources</a>
+                    <a href="#search" class="bg-brand-yellow text-brand-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-yellow-500 transition-colors duration-200">Find Jobs</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="#careers" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Career Fields</a>
+                <a href="#resources" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Resources</a>
+                <a href="#search" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-yellow hover:text-yellow-400 hover:bg-gray-700">Find Jobs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-32 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-black via-transparent to-transparent"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-brand-black tracking-tight mb-6">
+                Shape Your Future in <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-red">Uganda</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Welcome to the ultimate career guidance portal for Ugandan youth. Discover the opportunities, required skills, and growth sectors within the Pearl of Africa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#careers" class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-xl text-brand-black bg-brand-yellow hover:bg-yellow-500 shadow-sm hover:shadow-md transition-all duration-200">
+                    Explore Careers
+                </a>
+                <a href="#search" class="inline-flex justify-center items-center px-8 py-3.5 border-2 border-brand-black text-base font-medium rounded-xl text-brand-black bg-transparent hover:bg-brand-black hover:text-white transition-all duration-200">
+                    Search specific paths
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-brand-black mb-4">Top Career Fields</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover the viability of growing industries across Uganda and the specific qualifications you need to succeed in them.</p>
+            </div>
+
+            <!-- Careers Grid -->
+            <div id="careers-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-20 bg-brand-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Learning Resources</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Read up on the latest industry trends, professional development advice, and educational literature tailored for the Ugandan market.</p>
+            </div>
+
+            <!-- Resources List -->
+            <div class="max-w-4xl mx-auto">
+                <div id="resources-container" class="space-y-4">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="py-20 bg-brand-light flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-black mb-4">Job & Career Search</h2>
+                <p class="text-gray-600">Filter by region or keyword to find the right path for you.</p>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-200 mb-12">
+                <form id="search-form" class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1">
+                        <label for="search-region" class="sr-only">Region</label>
+                        <select id="search-region" class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all bg-white text-gray-700">
+                            <option value="all">All Regions</option>
+                            <option value="kampala">Central (Kampala, Entebbe)</option>
+                            <option value="western">Western (Mbarara, Fort Portal)</option>
+                            <option value="eastern">Eastern (Jinja, Mbale)</option>
+                            <option value="northern">Northern (Gulu, Lira)</option>
+                        </select>
+                    </div>
+                    <div class="flex-[2]">
+                        <label for="search-keywords" class="sr-only">Keywords</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <input type="text" id="search-keywords" placeholder="Keywords (e.g. Technology, Medicine...)" class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all" />
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-brand-red text-white font-medium px-8 py-3.5 rounded-xl hover:bg-rose-700 transition-colors shadow-sm flex-shrink-0">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Search Results -->
+            <div id="search-results-container" class="hidden">
+                <h3 class="text-xl font-semibold text-brand-black mb-6 border-b pb-2">Search Results</h3>
+                <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Results injected here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="current-year"></span> Uganda Career Compass. Built for the future of the Pearl of Africa.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- STATE ---
+        const careersData = [
+            {
+                title: "Agri-Business & Agri-Tech",
+                region: "all",
+                regionDisplay: "Nationwide",
+                link: "agri.html",
+                viability: "Highly Viable. Agriculture employs a majority of the population; integrating tech provides massive growth and export potential.",
+                qualifications: "BSc in Agriculture/Agribusiness, Tech Diplomas, or hands-on farming experience.",
+            },
+            {
+                title: "Information Technology (IT)",
+                region: "kampala",
+                regionDisplay: "Central Region",
+                link: "ict.html",
+                viability: "Rapid Growth. The startup ecosystem in Kampala is expanding, leading to a high demand for developers and data analysts.",
+                qualifications: "BSc in Computer Science/IT, Coding Bootcamp Certifications, or robust project portfolios.",
+            },
+            {
+                title: "Tourism & Hospitality",
+                region: "western",
+                regionDisplay: "Western Region",
+                link: "tourism.html",
+                viability: "Steady & Lucrative. Uganda's national parks drive heavy foreign exchange, requiring skilled hospitality staff.",
+                qualifications: "Diploma/Degree in Tourism, Guiding Licenses, or Wildlife Conservation degrees.",
+            },
+            {
+                title: "Healthcare & Public Health",
+                region: "all",
+                regionDisplay: "Nationwide",
+                link: "#",
+                viability: "Critical Need. Continuous demand for medical professionals to support the growing population and national health infrastructure.",
+                qualifications: "MBChB (Medicine), Nursing Degrees, or Public Health Administration credentials.",
+            },
+        ];
+
+        const resourcesData = [
+            {
+                type: "Book",
+                title: "Navigating the Ugandan Job Market",
+                desc: "A comprehensive guide on resume writing, interview preparation, and corporate culture in East Africa.",
+            },
+            {
+                type: "Article",
+                title: "The Rise of Tech Hubs in Kampala",
+                desc: "An insightful read into how the IT sector is creating new roles for developers and data analysts in Uganda.",
+            },
+            {
+                type: "Book",
+                title: "Modern Agriculture for the Youth",
+                desc: "Learn how young Ugandans are turning traditional farming into highly profitable agribusiness ventures.",
+            },
+            {
+                type: "Article",
+                title: "Preparing for the Oil Sector",
+                desc: "An analysis of the jobs expected to emerge from the Albertine Graben oil project and how to qualify.",
+            },
+        ];
+
+        // --- DOM ELEMENTS ---
+        const careersContainer = document.getElementById("careers-container");
+        const resourcesContainer = document.getElementById("resources-container");
+        const searchResultsWrapper = document.getElementById("search-results-container");
+        const searchResultsContainer = document.getElementById("search-results");
+
+        // --- UI HELPERS ---
+        
+        // Generate Career Card HTML
+        function generateCareerCard(career) {
+            return `
+                <a href="${career.link || '#'}" class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:border-brand-yellow/50 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-brand-black group-hover:text-brand-yellow transition-colors">${career.title}</h3>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-brand-red text-xs font-semibold mb-4 border border-red-100">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        ${career.regionDisplay}
+                    </span>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Viability</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">${career.viability}</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Qualifications</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">${career.qualifications}</p>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
+        // --- RENDERING FUNCTIONS ---
+        function renderCareers() {
+            careersContainer.innerHTML = careersData.map(generateCareerCard).join('');
+        }
+
+        function renderResources() {
+            resourcesContainer.innerHTML = resourcesData.map(resource => {
+                const iconPath = resource.type === 'Book' 
+                    ? 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+                    : 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5L18.5 8H20';
+                
+                return `
+                <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-5 hover:bg-gray-800 transition-colors flex gap-4">
+                    <div class="flex-shrink-0 mt-1 text-brand-yellow">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${iconPath}"></path></svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-gray-700 text-gray-300">${resource.type}</span>
+                            <h4 class="text-lg font-semibold text-white">${resource.title}</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 leading-relaxed">${resource.desc}</p>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        // --- INITIALIZATION ---
+        renderCareers();
+        renderResources();
+
+        // --- EVENT LISTENERS ---
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Hamburger
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // X mark
+            }
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+
+        // Search Functionality
+        document.getElementById("search-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const searchRegion = document.getElementById("search-region").value;
+            const keyword = document.getElementById("search-keywords").value.toLowerCase().trim();
+
+            const results = careersData.filter((career) => {
+                const matchesRegion = searchRegion === "all" || career.region === searchRegion || career.region === "all";
+                const matchesKeyword = !keyword || 
+                    career.title.toLowerCase().includes(keyword) ||
+                    career.viability.toLowerCase().includes(keyword) ||
+                    career.qualifications.toLowerCase().includes(keyword);
+                
+                return matchesRegion && matchesKeyword;
+            });
+
+            searchResultsWrapper.classList.remove('hidden');
+            searchResultsContainer.innerHTML = "";
+
+            if (results.length === 0) {
+                searchResultsContainer.innerHTML = `
+                    <div class="col-span-full py-8 text-center bg-gray-50 rounded-xl border border-dashed border-gray-300">
+                        <p class="text-gray-500 font-medium">No matching careers found. Try adjusting your search filters.</p>
+                    </div>`;
+            } else {
+                searchResultsContainer.innerHTML = results.map(generateCareerCard).join('');
+            }
+
+            // Smooth scroll to results
+            searchResultsWrapper.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information Technology | Uganda Career Compass</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#1f2937', 
+                            yellow: '#facc15', 
+                            blue: '#2563eb', // Specific to IT page
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-black text-white sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-brand-yellow tracking-tight hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Back to Compass
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-24 bg-brand-blue overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMC41Ij48cGF0aCBkPSJNMzYgMzR2LTRIMzB2NGg2em0wIDEyaDEwdjEwaC0xMHYtMTB6bS04LTRoLTR2LTRoNHY0em0wLTRoLTR2LTRoNHY0em0wLTRoLTR2LTRoNHY0em0wLTRoLTR2LTRoNHY0em0wLTRoLTR2LTRoNHY0eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white text-sm font-semibold tracking-wider mb-4 border border-white/30 uppercase">Central Hub: Kampala & Entebbe</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+                Information Technology
+            </h1>
+            <p class="text-lg md:text-xl text-blue-50 mb-8 max-w-3xl mx-auto leading-relaxed">
+                The digital frontier in Uganda is expanding. From Fintech and E-commerce to government digitisation, IT is the fastest-growing sector for young professionals in the Central region.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Market Viability -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+            <div>
+                <h2 class="text-3xl font-bold text-brand-black mb-6">Market Viability in Uganda</h2>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    Uganda's tech landscape is maturing rapidly. Kampala is now home to numerous Innovation Hubs (like Innovation Village and Outbox) and a thriving startup scene. Companies are looking for local talent to build solutions tailored to Ugandan challenges, such as mobile money integrations and digital health tracking.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    With the government's "Digital Transformation Roadmap," demand for network engineers, cybersecurity experts, and database administrators is at an all-time high in both public and private sectors.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-xl font-bold text-brand-black mb-4 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    Industry Stats
+                </h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <span><strong>Demand:</strong> 25% annual growth in demand for software developers.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span><strong>Work Flexibility:</strong> High remote work potential for international clients.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <span><strong>Networking:</strong> Hubs in Kampala provide mentorship and funding access.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key IT Roles -->
+        <h2 class="text-3xl font-bold text-brand-black mb-8 text-center">Key Specialisations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            
+            <!-- Role 1 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-black mb-2">Software Engineer</h3>
+                <p class="text-gray-600 text-sm mb-4">Focuses on building web and mobile applications. Proficiency in JavaScript (React/Node), Python, or Flutter is highly sought after in the Ugandan market.</p>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-black mb-2">Cybersecurity Analyst</h3>
+                <p class="text-gray-600 text-sm mb-4">Protects corporate data from threats. As Ugandan banks and government bodies move online, protecting digital infrastructure is a top priority.</p>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-brand-black mb-2">Data Scientist</h3>
+                <p class="text-gray-600 text-sm mb-4">Analyzes large datasets to help businesses make decisions. Used extensively in Fintech to assess credit-worthiness for mobile loans.</p>
+            </div>
+
+        </div>
+
+        <!-- Path to Success -->
+        <div class="bg-brand-black text-white rounded-3xl p-8 md:p-12 mb-12">
+            <h2 class="text-3xl font-bold mb-6">Educational Requirements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold text-brand-yellow mb-3">Degrees in Uganda</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• BSc Computer Science (Makerere, MUBs, etc.)</li>
+                        <li>• BSc Software Engineering</li>
+                        <li>• BSc Information Systems</li>
+                        <li>• Diploma in Computer Engineering</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold text-brand-yellow mb-3">Essential Certifications</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• AWS/Azure Cloud Practitioner</li>
+                        <li>• Cisco Certified Network Associate (CCNA)</li>
+                        <li>• CompTIA Security+</li>
+                        <li>• Google Data Analytics Certificate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="current-year"></span> Uganda Career Compass. Empowering the digital generation.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
